@@ -6,7 +6,7 @@
   
   .login-box {
     position: absolute;
-    z-index: 800;
+    z-index: 850;
     top: 50%;
     left: 50%;
     width: 400px;
