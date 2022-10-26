@@ -1,9 +1,9 @@
 
-<header>
+<header class="nav">
  <img src="./assets/images/logo final.png" alt="logo">
-    <nav class="nav">
-    <a class="nav-link" href="./index.php?p=inscription">Billetterie</a>
-        <a class="nav-link" href="./index.php?p=jeu">Develop DevelopMuseum</a>
-        <a class="nav-link" href="./index.php?p=points">Scores</a>
+    <nav>
+      <li> <a href="./index.php?p=inscription">Billetterie</a></li>
+      <li><a href="./index.php?p=jeu"> Jeu</a></li>
+      <li><a href="./index.php?p=points">Score</a></li>
      </nav>
 </header>
