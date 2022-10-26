@@ -2,6 +2,11 @@ let config = {
     type: Phaser.AUTO,
     width: 800,
     height: 600,
+    scale: {
+        width: 800,
+        height: 600,
+        parent: "game"
+    },
     physics: {
         default: 'arcade'
     },
@@ -12,6 +17,7 @@ let config = {
     },
     audio: {
         disableWebAudio: true
+
     }
 };
 
@@ -29,5 +35,4 @@ function create ()
 
 }
 
-function update ()
-{}
+function update() { }
