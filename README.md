@@ -15,7 +15,7 @@
     - project management : **1**
 
 
-|  | *The Team* |  |  
+| *The Team* |
 | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: |
 |   Menen   |  Resa  | Virginie | Alessandra | Jennifer | Chaimae |
 
