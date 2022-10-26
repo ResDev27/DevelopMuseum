@@ -1,7 +1,3 @@
-<?php
-    include "./includes/header.php";
-?>
-
 <h1>Page Scores</h1>
 <?php
 
@@ -17,7 +13,15 @@ try {
         // 4. Obtenir les données dans un array 
         $arrayRes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        var_dump ($arrayRes);
+        foreach ($arrayRes as $badge) {
+
+            echo '<div class="card" style="width: 10rem;">';
+            echo '<a href="./detailFilm.php?id=' . $film['id']  . '"><img class="card-img-top" src="./img/'  . $film['image'] .   '" alt="' . $film['titre'] . '"></a>';
+            echo '<div class="card-body">';
+            echo '<h5 class="card-title">' . $film['titre'] . '</h5>';
+            echo '</div>';
+            echo '</div>';
+        }
 
     } catch (Exception $e) {
 
