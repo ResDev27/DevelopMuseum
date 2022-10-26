@@ -28,7 +28,7 @@
       <span></span>
       <span></span>
       <span></span>
-     <input type="submit">
+     <input id="btn-valid" type="submit">
     </a>
         
     </form>

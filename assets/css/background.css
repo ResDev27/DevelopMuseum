@@ -12,7 +12,7 @@
 --grisblanc: #f1f1f0;
 --bleuclair: #5e83ba;
 --gris:#c2d2e9;
---jaune:#ffbf21;
+--jaune:rgb(255, 191, 33);
 --overlay-color: rgba(24,39,51,0.85);
     --menu-speed: 0.75s;
 }
