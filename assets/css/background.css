@@ -1,0 +1,38 @@
+*{
+  box-sizing: border-box;
+}
+
+html, body {
+margin: 0;
+display: flex;
+flex-direction: column;
+justify-content: center;
+  }
+  
+  body>canvas:first-of-type {
+  position: absolute;
+  z-index: 9999;
+  width: 900px;
+ 
+  left: 26%;
+top: 15%;
+  }
+
+
+  #defaultCanvas0{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100vh;
+  }
+
+  img{
+    position: relative;
+    width: 12%;
+    z-index: 9998;
+    left: 1%;
+    margin-top: 1%;
+
+  }
+
