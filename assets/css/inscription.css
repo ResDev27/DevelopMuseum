@@ -1,11 +1,17 @@
 /* -----------------Inscription ------------------------*/
 
+body{
+    font-family: 'pixel';
+}
 
-
-
+@font-face {
+    font-family: "pixel";
+    src: url(DevelopMuseum/assets/fonts/LLPIXEL3.ttf);
+  }
   
   .login-box {
     position: absolute;
+    color: #ffbf21;
     z-index: 850;
     top: 50%;
     left: 50%;
@@ -27,6 +33,7 @@
   
   .login-box .user-box {
     position: relative;
+    
   }
   
   .login-box .user-box input {
@@ -77,10 +84,10 @@
     background: #03e9f4;
     color: #fff;
     border-radius: 5px;
-    box-shadow: 0 0 5px #03e9f4,
-                0 0 25px #03e9f4,
-                0 0 50px #03e9f4,
-                0 0 100px #03e9f4;
+    box-shadow: 0 0 5px #ffbf21,
+                0 0 25px #ffbf21,
+                0 0 50px #ffbf21,
+                0 0 100px #ffbf21;
   }
   
   .login-box a span {
@@ -93,10 +100,33 @@
     left: -100%;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, transparent, #03e9f4);
+    background: linear-gradient(90deg, transparent, #ffbf21);
     animation: btn-anim1 1s linear infinite;
   }
+
+  #btn-valid{
+
+    border: none;
+
+    background-color: rgba(255, 255, 255, 0);
   
+    color: #03e9f4;
+  
+    font-size: 1rem;
+  
+    text-transform: uppercase;
+  
+  }
+  
+  #btn-valid:hover{
+    border: none;
+
+  background-color: rgba(255, 255, 255, 0);
+
+  color: #ffbf21;
+  
+  }
+
   @keyframes btn-anim1 {
     0% {
       left: -100%;
@@ -130,7 +160,7 @@
     right: -100%;
     width: 100%;
     height: 2px;
-    background: linear-gradient(270deg, transparent, #03e9f4);
+    background: linear-gradient(270deg, transparent, #ffbf21);
     animation: btn-anim3 1s linear infinite;
     animation-delay: .5s
   }
@@ -164,7 +194,6 @@
   }
 
 
-  /* ----------------Bouton---------------- */
+  /* ----------------Bouton-------------- */
 
 
-  
