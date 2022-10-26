@@ -6,6 +6,8 @@ html {
     height: 100%;
   }
   body {
+    position: absolute;
+    z-index: 9999;
     margin:0;
     padding:0;
     font-family: sans-serif;
@@ -14,8 +16,8 @@ html {
   
   .login-box {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 25%;
+    left: 25%;
     width: 400px;
     padding: 40px;
     transform: translate(-50%, -50%);

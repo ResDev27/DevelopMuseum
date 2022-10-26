@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="DevelopMuseum\assets\css\inscription.css">
+    <link rel="stylesheet" href="./assets/css/background.css">
+    <link rel="stylesheet" href="./assets/css/inscription.css">
     <title>Inscription Au DevelopMuseum</title>
 </head>
 <body>
@@ -22,8 +23,20 @@
         <div class="user-box">
         Date:<input type="date" name="date" value="<?=date("Y-m-d H:i:s");?>">
         </div>
+        <a href="#">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+     
+    </a>
         <input type="submit">
     </form>
 </div>
+
+
+   
+     <script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/p5.min.js'></script>
+    <script src="./Js/background.js"></script>
 </body>
 </html>
