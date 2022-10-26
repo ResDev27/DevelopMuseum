@@ -10,13 +10,11 @@
 - Deployment strategy :
     - Github page
 - Team challenge: **2 WAD, 2 WEB, 2 Unity** 
-    - frontend: **1 or 2**
-    - backend: **1 or 2**
+    - frontend: **2**
+    - backend: **2**
+    - Game: **2**
     - project management : **1**
 
-
-| *The Team* |
-| :-----: | :-----: | :-----: | :-----: | :-----: | :-----: |
 |   Menen   |  Resa  | Virginie | Alessandra | Jennifer | Chaimae |
 
 ## The Mission
