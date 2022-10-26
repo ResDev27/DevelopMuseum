@@ -5,7 +5,3 @@
     <script src="./js/phaser.min.js"></script>
     <script src="./js/DevelopMuseum.js"></script>
 </div>
-
-<?php
-include "./includes/footer.php";
-?>

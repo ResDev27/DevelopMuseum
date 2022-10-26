@@ -14,22 +14,22 @@ try {
         $arrayRes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         foreach ($arrayRes as $badge) {
-
-            echo '<div class="card" style="width: 10rem;">';
-            echo '<a href="./detailFilm.php?id=' . $film['id']  . '"><img class="card-img-top" src="./img/'  . $film['image'] .   '" alt="' . $film['titre'] . '"></a>';
-            echo '<div class="card-body">';
-            echo '<h5 class="card-title">' . $film['titre'] . '</h5>';
+            echo '<div>';
+            echo 'PSEUDO : '.$badge['pseudo']. ' | ' ;
+            echo 'AGE : '.$badge['age']. ' | ' ;
+            echo 'GAME : '.$badge['pointsGame']. ' | ' ;
+            echo 'FRONT END : '.$badge['pointsFront']. ' | ' ;
+            echo 'BACK END : '.$badge['pointsBack']. ' | ' ;
+            echo '<br>';
             echo '</div>';
-            echo '</div>';
-        }
+        };
+    }
 
-    } catch (Exception $e) {
+    catch (Exception $e) {
 
         echo $e->getMessage();
 
         die();
 }
-
-include "./includes/footer.php";
 
 ?>
