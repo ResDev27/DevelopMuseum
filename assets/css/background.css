@@ -81,7 +81,7 @@ margin-top: 2px;
   }
 .nav a{
   text-decoration: none;/*Pour que le lien ne soit plus "souligné"...*/
-  color: var(--jaune);
+  color: var(--grisblanc);
   font-family: "pixel";
   font-size: 29px;
 
