@@ -115,33 +115,38 @@ function update()
     if (cursors.left.isDown)
     {
         character.setVelocityX(-160);
+        character.setVelocityY(0);
         
         character.anims.play('left', true);
     }
-    if (cursors.right.isDown)
+    else if (cursors.right.isDown)
     {
         character.setVelocityX(160);
+        character.setVelocityY(0);
         
         character.anims.play('right', true);
     }
-    if (cursors.up.isDown)
+    else if (cursors.up.isDown)
     {
         character.setVelocityY(-160);
+        character.setVelocityX(0);
 
         character.anims.play('up',true);
     }
 
-    if (cursors.down.isDown)
+    else if (cursors.down.isDown)
     {
         character.setVelocityY(160);
+        character.setVelocityX(0);
 
         character.anims.play('down',true);
     }
 
     else
     {
-
-        character.anims.play("idle", true);
+        character.setVelocityX(0);
+        character.setVelocityY(0);
+        character.anims.play("idle",true);
     }
 
         
