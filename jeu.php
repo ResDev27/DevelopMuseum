@@ -10,16 +10,12 @@
 </head>
 <body>
 
-<?php
-
-?>
 
   
      <iframe src="iframe.php"></iframe>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/p5.min.js'></script>
    <script src="./Js/background.js"></script>
 
-<?php
 
-?>
+
 </body>
