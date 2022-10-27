@@ -85,7 +85,7 @@ function create ()
         repeat: -1
     });
     
-    character.anims.play("turn");
+    character.anims.play("right");
     
     //----CREATION ANIMATION ------ LEFT --------------------------------------------//
     
@@ -122,14 +122,12 @@ function update()
     if (cursors.left.isDown) //---------LEFT MOVE------------//
     {
         character.setVelocityX(-160);
-        character.setVelocityY(0);
         
         character.anims.play('left', true);
     }
     else if (cursors.right.isDown) //---------RIGHT MOVE------------//
     {
         character.setVelocityX(160);
-        character.setVelocityY(0);
         
         character.anims.play('right', true);
     }
@@ -153,7 +151,8 @@ function update()
     {
         character.setVelocityX(0);
         character.setVelocityY(0);
-        character.anims.play("idle",true);
+
+        character.anims.play('idle');
     }
 
         
