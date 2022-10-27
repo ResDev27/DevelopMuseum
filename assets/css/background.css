@@ -4,7 +4,11 @@
 /*font*/
 @font-face {
   font-family: "pixel";
-  src: url(../fonts/LLPIXEL3.ttf);
+  src: url("../fonts/LLPIXEL3.ttf");
+}
+@font-face {
+  font-family: "04b";
+  src: url("../fonts/04B_30__.TTF");
 }
 :root{
  --bleu: #3a4e7a;
@@ -240,6 +244,9 @@ z-index: 850 ;
   justify-content: end;
     position: absolute; 
     bottom: 0;
+    text-align: center;
+    font-family: "04b";
+    color: white;
 
   
 

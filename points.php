@@ -3,6 +3,14 @@
 <script src="./Js/point.js"></script>
 
 <?php
+    include "./includes/header.php";
+    ?>
+
+    <main>
+<?php
+    include "./includes/footer.php";
+?></main>
+<?php
 
 // 1. Créer une connexion à la BD
 include "./connection/db.php";
@@ -32,8 +40,9 @@ try {
 
         die();
 }
-
-include "./includes/footer.php";
-
 ?>
+
+
+ 
+
 </body>
