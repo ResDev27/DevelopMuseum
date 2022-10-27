@@ -1,4 +1,5 @@
 <h1>Page Scores</h1>
+
 <?php
 
 // 1. Créer une connexion à la BD
@@ -15,12 +16,16 @@ try {
 
         foreach ($arrayRes as $badge) {
             echo '<div>';
-            echo 'PSEUDO : '.$badge['pseudo']. ' | ' ;
-            echo 'AGE : '.$badge['age']. ' | ' ;
-            echo 'GAME : '.$badge['pointsGame']. ' | ' ;
-            echo 'FRONT END : '.$badge['pointsFront']. ' | ' ;
-            echo 'BACK END : '.$badge['pointsBack']. ' | ' ;
-            echo '<br>';
+            echo '<table>';
+            echo '<tr>';
+            echo '<th>PSEUDO</th>';
+            echo '<th>AGE</th>';
+            echo '<th>SCORE</th>';
+            echo '</tr>';
+            echo '<td>'.$badge['pseudo'] . '</td>';
+            echo '<td>'.$badge['age'].'</td>';
+            echo '<td>'.$badge['score']. '</td>';
+            echo '</table>';
             echo '</div>';
         };
     }
