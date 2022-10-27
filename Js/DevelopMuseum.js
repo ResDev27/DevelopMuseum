@@ -27,6 +27,7 @@ let game = new Phaser.Game(config);
 let Keystate = true;
 var cursors;
 let background;
+let computer; 
 
 
 function preload ()
@@ -36,16 +37,20 @@ function preload ()
         frameWidth: 65,
         frameHeight: 98,
     });
+    this.load.image('Computer', 'Assets/Images/Computer.png');
 }
 
 function create ()
 {
     //-------------------BACKGROUND -----------------------------------------//
-    background = this.add.image(0,0, 'background');
+    background = this.add.image(-800,0, 'background');
     background.setOrigin(0,0);
 
+    computer = this.add.image(200,400,'Computer');
 
 
+
+    // ---- Creation of all animation for the character and add of physics for the velocity ----//
     //---- ANIMATION ------ UP -----------------------------------------------//
     
     this.anims.create({
@@ -81,7 +86,7 @@ function create ()
     
     character.anims.play("right");
     
-    //----CREATION ANIMATION ------ LEFT ----------------------------------------------
+    //----CREATION ANIMATION ------ LEFT --------------------------------------------//
     
     this.anims.create({
         key: "left",
@@ -101,34 +106,52 @@ function create ()
     
     character.anims.play("idle");
     
-    //------------- Variable to monitor the movement ----------------------//
+    //------------- Variable to monitor which key is press ----------------------//
     
     cursors = this.input.keyboard.createCursorKeys();
     
-    //----------------------------------------------
 }
 
 function update()
 {
-    // -----------------------Update movement --------------------
+    // -----------------------Update movement --------------------//
+    // Character control with the arrow ( left, right, up, down) 
+
     
-    if (cursors.left.isDown)
+    if (cursors.left.isDown) //---------LEFT MOVE------------//
     {
         character.setVelocityX(-160);
         
         character.anims.play('left', true);
     }
-    else if (cursors.right.isDown)
+    else if (cursors.right.isDown) //---------RIGHT MOVE------------//
     {
         character.setVelocityX(160);
         
         character.anims.play('right', true);
     }
-    else
+    else if (cursors.up.isDown)//---------UP MOVE------------//
     {
+        character.setVelocityY(-160);
         character.setVelocityX(0);
 
-        character.anims.play('turn');
+        character.anims.play('up',true);
+    }
+
+    else if (cursors.down.isDown) //---------DOWN MOVE------------//
+    {
+        character.setVelocityY(160);
+        character.setVelocityX(0);
+
+        character.anims.play('down',true);
+    }   
+    
+    else //--------------- IDLE -----------------//
+    {
+        character.setVelocityX(0);
+        character.setVelocityY(0);
+
+        character.anims.play('idle');
     }
 
         
