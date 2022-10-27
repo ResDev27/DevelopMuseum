@@ -24,12 +24,14 @@ flex-direction: column;
 justify-content: center;
   }
   /* box du jeu ne jamais changer*/
-  body>canvas:first-of-type {
+ iframe {
   position: absolute;
   z-index: 800;
-  width: 900px; 
+  width: 820px;
+  height: 620px; 
   left: 26%;
   top: 20%;
+  border: none;
   }
 
 /* background*/
@@ -206,10 +208,11 @@ color: #FFA101;
 .logo_header{
 
   position: relative;
-  width: 10%;
-  height: 112px;
+  width: 14%;
+height: 115%;
   padding: 20px;
-  margin-left: 35px;
+  margin-top: 30px;
+  margin-left: 20px;
 z-index: 850 ;
 
 }

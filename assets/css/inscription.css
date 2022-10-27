@@ -4,19 +4,19 @@
 
 @font-face {
     font-family: "pixel";
-    src: url(DevelopMuseum/assets/fonts/LLPIXEL3.ttf);
+    src: url('../fonts/LLPIXEL3.ttf');
   }
   @font-face {
     font-family: "04b";
-    src: url(DevelopMuseum/assets/fonts/04B_30__.TTF);
+    src: url("../fonts/04B_30__.TTF");
   }
   @font-face {
     font-family: "rainyhearts";
-    src: url(DevelopMuseum/assets/fonts/rainyhearts.ttf);
+    src: url("../fonts/rainyhearts.ttf");
   }
   @font-face {
     font-family: "Mario-Kart-DS";
-    src: url(DevelopMuseum/assets/fonts/Mario-Kart-DS.ttf);
+    src: url("../fonts/Mario-Kart-DS.ttf");
   }
 
   .login-box {
@@ -36,7 +36,7 @@
   }
   
   .login-box h2 {
-    font-family: "Mario-Kart-DS";
+    font-family: "04b";
     margin: 0 0 30px;
     padding: 0;
     color: #fff;
@@ -46,9 +46,10 @@
   }
   
   .login-box .user-box {
-    font-family: "Mario-Kart-DS";
+    font-family: "rainyhearts";
     position: relative;
-    font-size: 1.5rem;
+    font-weight: bold;
+    font-size: 1.8rem;
 
    
     
@@ -59,6 +60,7 @@
     padding: 10px 0;
     font-size: 16px;
     color: #fff;
+    font-family: '04b';
     margin-bottom: 30px;
     border: none;
     border-bottom: 1px solid #fff;
