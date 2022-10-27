@@ -101,13 +101,13 @@
   }
   
   .login-box a:hover {
-    background: #03e9f4;
+    background: #dcb8d5;
     color: #fff;
     border-radius: 5px;
-    box-shadow: 0 0 5px #ffbf21,
-                0 0 25px #ffbf21,
-                0 0 50px #ffbf21,
-                0 0 100px #ffbf21;
+    box-shadow: 0 0 5px #6d3c62,
+                0 0 25px #6d3c62,
+                0 0 50px #6d3c62,
+                0 0 100px #6d3c62;
   }
   
   .login-box a span {
@@ -120,30 +120,29 @@
     left: -100%;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, transparent, #03e9f4);
+    background: linear-gradient(90deg, transparent, #ffa99d);
     animation: btn-anim1 1s linear infinite;
   }
 
+
+
+  /* ------------------------------Bouton-------------- */
   #btn-valid{
 
     border: none;
-
     background-color: rgba(255, 255, 255, 0);
-  
-    color: #03e9f4;
-  
+    color: #ffa99d;
+    border-radius: none;
     font-size: 1rem;
-  
     text-transform: uppercase;
   
   }
   
   #btn-valid:hover{
     border: none;
-
-  background-color: rgba(255, 255, 255, 0);
-
-  color: #ffbf21;
+    border-radius: none;
+    background-color: rgba(255, 255, 255, 0);
+    color: #6d3c62;
   
   }
 
@@ -157,11 +156,12 @@
   }
   
   .login-box a span:nth-child(2) {
+    
     top: -100%;
     right: 0;
     width: 2px;
     height: 100%;
-    background: linear-gradient(180deg, transparent, #03e9f4);
+    background: linear-gradient(180deg, transparent, #ffa99d);
     animation: btn-anim2 1s linear infinite;
     animation-delay: .25s
   }
@@ -180,7 +180,7 @@
     right: -100%;
     width: 100%;
     height: 2px;
-    background: linear-gradient(270deg, transparent, #03e9f4);
+    background: linear-gradient(270deg, transparent, #ffa99d);
     animation: btn-anim3 1s linear infinite;
     animation-delay: .5s
   }
@@ -199,7 +199,7 @@
     left: 0;
     width: 2px;
     height: 100%;
-    background: linear-gradient(360deg, transparent, #03e9f4);
+    background: linear-gradient(360deg, transparent, #ffa99d);
     animation: btn-anim4 1s linear infinite;
     animation-delay: .75s
   }
@@ -214,6 +214,5 @@
   }
 
 
-  /* ----------------Bouton-------------- */
 
 

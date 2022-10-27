@@ -9,7 +9,7 @@
     <title>Inscription Au DevelopMuseum</title>
 </head>
 <body>
-    <h1>Bienvenue au DevelopMuseum</h1>
+   
 
     <div class="login-box">
     <h2> Faites le check-in pour recevoir votre badge</h1>
@@ -37,6 +37,7 @@
 
    
      <script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/p5.min.js'></script>
-    <script src="./Js/background.js"></script>
+    <script src="./Js/inscription.js"></script>
+
 </body>
 </html>
