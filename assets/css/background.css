@@ -248,6 +248,19 @@ z-index: 850 ;
     font-family: "04b";
     color: white;
 
-  
 
+}
+
+div.cadre{
+  z-index: 805;
+  width:1200px;
+  height: 1026px;
+  background-image: url("../Images/bordure.png");
+  position: relative;
+  background-repeat: no-repeat;
+  margin-left: 13.8%;
+  bottom: 190px;
+  background-size: contain;
+
+  
 }
