@@ -28,6 +28,7 @@ let Keystate = true;
 let background;
 let computer; 
 
+
 var cursors;
 var character;
 var dist;
@@ -47,8 +48,9 @@ function create ()
     //-------------------BACKGROUND -----------------------------------------//
     background = this.add.image(0,0, 'background');
     background.setOrigin(0,0);
-
-    computer = this.add.image(200,400,'Computer');
+    
+    computer = this.add.image(200,400,'Computer').setInteractive();
+    computer.on('pointerdown', start);
 
 
 
@@ -63,7 +65,7 @@ function create ()
     });
     
     character = this.physics.add.sprite(100, 450, 'character');
-
+    
     character.anims.play("up");
 
     //----CREATION ANIMATION ------ DOWN ---------------------------------------//
@@ -158,13 +160,16 @@ function update()
         character.anims.play('idle');
     }
 
-    dist = Phaser.Math.Distance.BetweenPoints(character, computer);
+    //dist = Phaser.Math.Distance.BetweenPoints(character, computer);
 
-    if(dist < 75)
-    {
-        console.log("T'es tout pres");
-    }
+    // if(dist < 75)
+    // {
+    //     console.log("T'es tout pres");
+    // }
 
+}
 
-
+function start()
+{
+    console.log("Yep, t'as bien cliqué");
 }
