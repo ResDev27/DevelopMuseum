@@ -25,10 +25,11 @@ let config = {
 
 let game = new Phaser.Game(config);
 let Keystate = true;
-var cursors;
 let background;
 let computer; 
 
+var cursors;
+var character;
 
 function preload ()
 {
