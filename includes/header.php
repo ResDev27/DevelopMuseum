@@ -1,9 +1,27 @@
+<header class="header">
+   <div class="logo_header">
+      <a href="?page=inscription"><img class="img_logo" src="Assets\Images\logo final.png"></a>
+   </div>
+   <div class="menu-wrap-nav">
+      <input type="checkbox" class="toggler">
+      <div class="hamburger">
+         <div></div>
+      </div>
+      <div class="menu">
+         <div>
+            <div>
+               <ul>
+                  <li><a href="./index.php?p=inscription">Billetterie</a></li>
+                  <li><a href="./index.php?p=jeu"> Jeu</a></li>
+                  <li><a href="./index.php?p=points">Score</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </div>
 
-<header>
- <img src="./assets/images/logo final.png" alt="logo">
-    <nav class="nav">
-    <a class="nav-link" href="./index.php?p=inscription">Billetterie</a>
-        <a class="nav-link" href="./index.php?p=jeu">Develop DevelopMuseum</a>
-        <a class="nav-link" href="./index.php?p=points">Scores</a>
-     </nav>
+
+
+
+
 </header>
