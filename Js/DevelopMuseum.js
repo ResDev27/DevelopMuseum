@@ -18,6 +18,7 @@ let config = {
     },
     audio: {
         disableWebAudio: true
+
     }
 
 };
