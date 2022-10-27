@@ -10,17 +10,23 @@
     <title>DevelopMuseum</title>
 </head>
 
-<body>
+    <body>
 
    
-        <?php
-        if (isset($_GET['p'])) {
-            include "./" . $_GET['p'] . ".php";
-        } else {
-            include "./inscription.php";
-        }
-        ?>
+       
     
     
 </body>
+
+        
+            <?php
+            if (isset($_GET['p'])) {
+                include "./" . $_GET['p'] . ".php";
+            } else {
+                include "./inscription.php";
+            }
+            ?>
+      
+
+    </body>
 </html>

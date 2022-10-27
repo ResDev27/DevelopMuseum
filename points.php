@@ -1,15 +1,4 @@
-<body>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/p5.min.js'></script>
-<script src="./Js/point.js"></script>
-
-<?php
-    include "./includes/header.php";
-    ?>
-
-    <main>
-<?php
-    include "./includes/footer.php";
-?></main>
+<h1>Page Scores</h1>
 <?php
 
 // 1. Créer une connexion à la BD
@@ -25,24 +14,28 @@ try {
         $arrayRes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         foreach ($arrayRes as $badge) {
-
-            echo '<div class="card" style="width: 10rem;">';
-            echo '<a href="./detailFilm.php?id=' . $film['id']  . '"><img class="card-img-top" src="./img/'  . $film['image'] .   '" alt="' . $film['titre'] . '"></a>';
-            echo '<div class="card-body">';
-            echo '<h5 class="card-title">' . $film['titre'] . '</h5>';
+            echo '<div>';
+            echo '<table>';
+            echo '<tr>';
+            echo '<th>PSEUDO</th>';
+            echo '<th>AGE</th>';
+            echo '<th>SCORE</th>';
+            echo '</tr>';
+            echo '<td>'.$badge['pseudo'] . '</td>';
+            echo '<td>'.$badge['age'].'</td>';
+            echo '<td>'.$badge['score']. '</td>';
+            echo '</table>';
             echo '</div>';
-            echo '</div>';
-        }
+        };
+    }
 
-    } catch (Exception $e) {
+    catch (Exception $e) {
 
         echo $e->getMessage();
 
         die();
 }
+
+include "./includes/footer.php";
+
 ?>
-
-
- 
-
-</body>
