@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 26, 2022 at 11:49 AM
+-- Generation Time: Oct 27, 2022 at 03:51 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -29,16 +29,22 @@ USE `hackatonp1`;
 -- Table structure for table `badge`
 --
 
+DROP TABLE IF EXISTS `badge`;
 CREATE TABLE `badge` (
   `idBadge` int(11) NOT NULL,
   `pseudo` varchar(30) NOT NULL,
   `age` int(3) NOT NULL,
   `date` date NOT NULL DEFAULT current_timestamp(),
-  `role` varchar(100) DEFAULT NULL,
-  `pointsGame` int(4) DEFAULT NULL,
-  `pointsFront` int(4) DEFAULT NULL,
-  `pointsBack` int(4) DEFAULT NULL
+  `score` int(4) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `badge`
+--
+
+INSERT INTO `badge` (`idBadge`, `pseudo`, `age`, `date`, `score`) VALUES
+(2, 'test', 10, '2022-10-26', NULL),
+(3, 'fer', 10, '2022-10-26', NULL);
 
 --
 -- Indexes for dumped tables
@@ -58,7 +64,7 @@ ALTER TABLE `badge`
 -- AUTO_INCREMENT for table `badge`
 --
 ALTER TABLE `badge`
-  MODIFY `idBadge` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idBadge` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,6 +1,6 @@
 <header class="header">
    <div class="logo_header">
-      <a href="?page=inscription"><img class="img_logo" src="Assets\Images\logo final.png"></a>
+      <a href="?page=inscription"><img class="img_logo" src="Assets\Images\illufrontend\logo final.png"></a>
    </div>
    <div class="menu-wrap-nav">
       <input type="checkbox" class="toggler">

@@ -1,15 +1,36 @@
 /* -----------------Inscription ------------------------*/
 
-body{
-    font-family: 'pixel';
-}
+:root{
+  --bleu: #3a4e7a;
+ --bleufonce:#091d36;
+ --grisblanc: #f1f1f0;
+ --bleuclair: #5e83ba;
+ --gris:#c2d2e9;
+ --jaune:rgb(255, 191, 33);
+ --overlay-color: rgba(24,39,51,0.85);
+     --menu-speed: 0.75s;
+ }
+
 
 @font-face {
     font-family: "pixel";
-    src: url(DevelopMuseum/assets/fonts/LLPIXEL3.ttf);
+    src: url('../fonts/LLPIXEL3.ttf');
   }
-  
+  @font-face {
+    font-family: "04b";
+    src: url("../fonts/04B_30__.TTF");
+  }
+  @font-face {
+    font-family: "rainyhearts";
+    src: url("../fonts/rainyhearts.ttf");
+  }
+  @font-face {
+    font-family: "Mario-Kart-DS";
+    src: url("../fonts/Mario-Kart-DS.ttf");
+  }
+
   .login-box {
+    font-family: "Mario-Kart-DS";
     position: absolute;
     color: #ffbf21;
     z-index: 850;
@@ -24,15 +45,14 @@ body{
     border-radius: 10px;
   }
   
-  .login-box h2 {
-    margin: 0 0 30px;
-    padding: 0;
-    color: #fff;
-    text-align: center;
-  }
-  
+
   .login-box .user-box {
+    font-family: "rainyhearts";
     position: relative;
+    font-weight: bold;
+    font-size: 1.8rem;
+
+   
     
   }
   
@@ -41,6 +61,7 @@ body{
     padding: 10px 0;
     font-size: 16px;
     color: #fff;
+    font-family: '04b';
     margin-bottom: 30px;
     border: none;
     border-bottom: 1px solid #fff;
@@ -56,7 +77,7 @@ body{
     color: #fff;
     pointer-events: none;
     transition: .5s;
-  }
+  } 
   
   .login-box .user-box input:focus ~ label,
   .login-box .user-box input:valid ~ label {
@@ -77,71 +98,41 @@ body{
     overflow: hidden;
     transition: .5s;
     margin-top: 40px;
-    letter-spacing: 4px
+    letter-spacing: 4px;
+    margin-left:64%;
   }
   
   .login-box a:hover {
-    background: #03e9f4;
+    background: #dcb8d5;
     color: #fff;
     border-radius: 5px;
-    box-shadow: 0 0 5px #ffbf21,
-                0 0 25px #ffbf21,
-                0 0 50px #ffbf21,
-                0 0 100px #ffbf21;
+    box-shadow: 0 0 5px #6d3c62,
+                0 0 25px #6d3c62,
+                0 0 50px #6d3c62,
+                0 0 100px #6d3c62;
   }
   
-  .login-box a span {
+  .login-box a span.ligne {
     position: absolute;
     display: block;
   }
   
-  .login-box a span:nth-child(1) {
+  .login-box a span.ligne:nth-child(1) {
     top: 0;
     left: -100%;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, transparent, #ffbf21);
+    background: linear-gradient(90deg, transparent, #ffa99d);
     animation: btn-anim1 1s linear infinite;
   }
-
-  #btn-valid{
-
-    border: none;
-
-    background-color: rgba(255, 255, 255, 0);
   
-    color: #03e9f4;
-  
-    font-size: 1rem;
-  
-    text-transform: uppercase;
-  
-  }
-  
-  #btn-valid:hover{
-    border: none;
-
-  background-color: rgba(255, 255, 255, 0);
-
-  color: #ffbf21;
-  
-  }
-
-  @keyframes btn-anim1 {
-    0% {
-      left: -100%;
-    }
-    50%,100% {
-      left: 100%;
-    }
-  }
-  
-  .login-box a span:nth-child(2) {
+  .login-box a span.ligne:nth-child(2) {
+    
     top: -100%;
     right: 0;
     width: 2px;
     height: 100%;
-    background: linear-gradient(180deg, transparent, #03e9f4);
+    background: linear-gradient(180deg, transparent, #ffa99d);
     animation: btn-anim2 1s linear infinite;
     animation-delay: .25s
   }
@@ -155,12 +146,12 @@ body{
     }
   }
   
-  .login-box a span:nth-child(3) {
+  .login-box a span.ligne:nth-child(3) {
     bottom: 0;
     right: -100%;
     width: 100%;
     height: 2px;
-    background: linear-gradient(270deg, transparent, #ffbf21);
+    background: linear-gradient(270deg, transparent, #ffa99d);
     animation: btn-anim3 1s linear infinite;
     animation-delay: .5s
   }
@@ -174,12 +165,12 @@ body{
     }
   }
   
-  .login-box a span:nth-child(4) {
+  .login-box a span.ligne:nth-child(4) {
     bottom: -100%;
     left: 0;
     width: 2px;
     height: 100%;
-    background: linear-gradient(360deg, transparent, #03e9f4);
+    background: linear-gradient(360deg, transparent, #ffa99d);
     animation: btn-anim4 1s linear infinite;
     animation-delay: .75s
   }
@@ -192,8 +183,69 @@ body{
       bottom: 100%;
     }
   }
+  div.titre {
+    font-family: "04b";
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+    /* cursor: url("../Images/icon_loupe.png"),auto; */
+    cursor: zoom-in;
+  }
+  
+  span.letter {
+    display:inline-block;
+    padding:0;
+    margin: 0 -20px 0 -4px;
+    user-select: none !important;
+    transition:0.3s;
+  }
+  
+  span.space {
+    padding: 0 5px !important;
+    margin:0 1px;
+  }
+  
+  span.letter:nth-child(even):hover {
+    filter: blur(10px);
+    transform: rotate(90deg);
+   
+  }
+  
+  span.letter:nth-child(odd):hover {
+    filter: blur(10px);
+    transform: rotate(-90deg);
+  }
 
+ /* ------------------------------Bouton-------------- */
+ #btn-valid{
 
-  /* ----------------Bouton-------------- */
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  color: #ffa99d;
+  border-radius: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  /* font-family: "pixel"; */
 
+}
+
+#btn-valid:hover{
+  border: none;
+  border-radius: none;
+  background-color: rgba(255, 255, 255, 0);
+  color: #6d3c62;
+  /* font-family: "pixel"; */
+
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
+  }
+}
 
