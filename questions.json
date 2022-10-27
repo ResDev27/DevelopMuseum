@@ -1,0 +1,25 @@
+{
+    "questions": [
+        {
+            "title": "Quel est l'OS parmi ces trois propositions:",
+            "answer": ["Windows 10", "DHCP", "DNS"],
+            "goodAnswer": true
+        },
+        {
+            "title": "La décomposition en une suite d'étapes d'un programme destiné à résoudre un problème ou à accomplir une tâche déterminée. ",
+            "answer": ["Equation", " Algorythme", "Liste"],
+            "goodAnswer": true
+        },
+        {
+            "title": "Quel est l'OS parmi ces trois propositions:",
+            "answer": ["Windows 10", "DHCP", "DNS"],
+            "goodAnswer": true
+        },
+        {
+            "title": "La décomposition en une suite d'étapes d'un programme destiné à résoudre un problème ou à accomplir une tâche déterminée. ",
+            "answer": ["Equation", " Algorythme", "Liste"],
+            "goodAnswer": true
+        }
+        
+  ]
+}
