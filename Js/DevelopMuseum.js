@@ -122,12 +122,14 @@ function update()
     if (cursors.left.isDown) //---------LEFT MOVE------------//
     {
         character.setVelocityX(-160);
+        character.setVelocityY(0);
         
         character.anims.play('left', true);
     }
     else if (cursors.right.isDown) //---------RIGHT MOVE------------//
     {
         character.setVelocityX(160);
+        character.setVelocityY(0);
         
         character.anims.play('right', true);
     }
@@ -155,5 +157,6 @@ function update()
         character.anims.play('idle');
     }
 
-        
+
+
 }
