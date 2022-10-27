@@ -12,11 +12,7 @@
 
 <body>
 
-    <?php
-    include "./includes/header.php";
-    ?>
-
-    <main>
+   
         <?php
         if (isset($_GET['p'])) {
             include "./" . $_GET['p'] . ".php";
@@ -24,11 +20,7 @@
             include "./inscription.php";
         }
         ?>
-    </main>
-
-    <?php
-        include "./includes/footer.php";
-    ?> 
+    
     
 </body>
 </html>

@@ -76,7 +76,7 @@
     color: #fff;
     pointer-events: none;
     transition: .5s;
-  }
+  } 
   
   .login-box .user-box input:focus ~ label,
   .login-box .user-box input:valid ~ label {
@@ -97,7 +97,8 @@
     overflow: hidden;
     transition: .5s;
     margin-top: 40px;
-    letter-spacing: 4px
+    letter-spacing: 4px;
+    margin-left:64%;
   }
   
   .login-box a:hover {

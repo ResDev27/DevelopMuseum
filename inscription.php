@@ -10,9 +10,13 @@
 </head>
 <body>
    
+<?php
+    include "./includes/header.php";
+    ?>
 
+    <main>
     <div class="login-box">
-    <h2> Faites le check-in pour recevoir votre badge</h1>
+    <h2> Check in and get your badge </h1>
     <form action="./inscriptionTraitement.php" method="POST">
         <div class="user-box">
         Pseudo:<input type="text" name="pseudo">
@@ -28,7 +32,8 @@
       <span></span>
       <span></span>
       <span></span>
-     <input id="btn-valid" type="submit">
+      <!-- votre badge -->
+     <input id="btn-valid" type="submit" value="check in">
     </a>
         
     </form>
@@ -38,6 +43,10 @@
    
      <script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/p5.min.js'></script>
     <script src="./Js/inscription.js"></script>
+    </main>
 
+<?php
+    include "./includes/footer.php";
+?> 
 </body>
 </html>
