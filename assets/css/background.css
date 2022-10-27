@@ -237,14 +237,10 @@ z-index: 850 ;
 .bas{
   width: 100%;
   z-index: 855;
-  height: 150px;
-justify-content: end;
-
-    /* Fixe l'image en haut à gauche de la page */
+  justify-content: end;
     position: absolute; 
-    bottom: -100px; 
-    left: 0; 
-    /* Préserve le ratio de l'image */
+    bottom: 0;
+
   
 
 }
