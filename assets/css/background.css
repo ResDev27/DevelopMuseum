@@ -238,16 +238,13 @@ z-index: 850 ;
   width: 100%;
   z-index: 855;
   height: 150px;
-  display: flex;
-  justify-content: end;
+justify-content: end;
 
     /* Fixe l'image en haut à gauche de la page */
-    position: fixed; 
-    bottom: 0; 
+    position: absolute; 
+    bottom: -100px; 
     left: 0; 
     /* Préserve le ratio de l'image */
-    min-width: 100%;
-    min-height: 100%;
-   
+  
 
 }
