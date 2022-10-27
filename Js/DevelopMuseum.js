@@ -25,10 +25,11 @@ let config = {
 
 let game = new Phaser.Game(config);
 let Keystate = true;
-var cursors;
 let background;
 let computer; 
 
+var cursors;
+var character;
 
 function preload ()
 {
@@ -43,7 +44,7 @@ function preload ()
 function create ()
 {
     //-------------------BACKGROUND -----------------------------------------//
-    background = this.add.image(-800,0, 'background');
+    background = this.add.image(0,0, 'background');
     background.setOrigin(0,0);
 
     computer = this.add.image(200,400,'Computer');
