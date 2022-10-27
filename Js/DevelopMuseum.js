@@ -30,6 +30,7 @@ let computer;
 
 var cursors;
 var character;
+var dist;
 
 function preload ()
 {
@@ -155,6 +156,13 @@ function update()
         character.setVelocityY(0);
 
         character.anims.play('idle');
+    }
+
+    dist = Phaser.Math.Distance.BetweenPoints(character, computer);
+
+    if(dist < 75)
+    {
+        console.log("T'es tout pres");
     }
 
 
