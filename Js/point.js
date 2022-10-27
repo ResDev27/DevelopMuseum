@@ -20,11 +20,11 @@ function setup() {
     return color(random(100, 200), random(100, 200), random(100, 200));
   }
 
-  flyBoxColors.push(color('#3a4e7a'));
-  flyBoxColors.push(color('#091d36'));
-  flyBoxColors.push(color('#f1f1f0'));
-  flyBoxColors.push(color('#5e83ba'));
-  flyBoxColors.push(color('#c2d2e9'));
+  flyBoxColors.push(color('#0f4b49'));
+  flyBoxColors.push(color('#0e6b51'));
+  flyBoxColors.push(color('#0a9857'));
+  flyBoxColors.push(color('#5cd352'));
+  flyBoxColors.push(color('#d9ff57'));
 }
 
 function draw() {

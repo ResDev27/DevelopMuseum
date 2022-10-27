@@ -1,5 +1,15 @@
 /* -----------------Inscription ------------------------*/
 
+:root{
+  --bleu: #3a4e7a;
+ --bleufonce:#091d36;
+ --grisblanc: #f1f1f0;
+ --bleuclair: #5e83ba;
+ --gris:#c2d2e9;
+ --jaune:rgb(255, 191, 33);
+ --overlay-color: rgba(24,39,51,0.85);
+     --menu-speed: 0.75s;
+ }
 
 
 @font-face {
