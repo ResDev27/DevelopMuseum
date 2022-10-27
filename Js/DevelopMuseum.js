@@ -25,10 +25,12 @@ let config = {
 let game = new Phaser.Game(config);
 let Keystate = true;
 var cursors;
+let background;
 
 
 function preload ()
 {
+    this.load.image('background', 'Assets/Images/museum.png');
     this.load.spritesheet('character', 'Assets/Images/character.png', {
         frameWidth: 65,
         frameHeight: 98,
@@ -37,6 +39,10 @@ function preload ()
 
 function create ()
 {
+    //-------------------BACKGROUND -----------------------------------------//
+    background = this.add.image(0,0, 'background');
+    background.setOrigin(0,0);
+
 
 
     //---- ANIMATION ------ UP -----------------------------------------------//
