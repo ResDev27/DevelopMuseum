@@ -1,4 +1,15 @@
-<h1>Page Scores</h1>
+<body>
+    
+<main><script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/p5.min.js'></script>
+   <script src="./Js/point.js"></script></main>
+   <?php
+    include "./includes/header.php";
+    ?>
+    
+    <?php
+    include "./includes/footer.php";
+    ?>
+</body>
 <?php
 
 // 1. Créer une connexion à la BD
@@ -36,6 +47,6 @@ try {
         die();
 }
 
-include "./includes/footer.php";
+
 
 ?>
