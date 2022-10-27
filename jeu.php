@@ -17,7 +17,7 @@
 
     <script src="./js/phaser.min.js"></script>
     <script src="./js/DevelopMuseum.js"></script>
-     <script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/p5.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/p5.min.js'></script>
     <script src="./Js/background.js"></script>
    
 
