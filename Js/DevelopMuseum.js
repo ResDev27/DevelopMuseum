@@ -42,20 +42,28 @@ var dist;
 function preload ()
 {
     this.load.image('background', 'Assets/Images/museum640.png');
-    this.load.spritesheet('character', 'Assets/Images/character.png', {
-        frameWidth: 65,
-        frameHeight: 98,
+    this.load.spritesheet('character', 'Assets/Images/chara.png', {
+        frameWidth: 49,
+        frameHeight: 49,
     });
     this.load.image('Computer', 'Assets/Images/Computer.png');
     this.load.image('museumTiles', 'Assets/Images/museum640.png');
     this.load.tilemapTiledJSON('museumMap', 'Assets/maps/museummapproject.tmj');
-    this.load.image('window', 'Assets/Images/window.png')
-    this.load.image('response', 'Assets/Images/response.png')
+    this.load.image('window', 'Assets/Images/window.png');
+    this.load.image('response', 'Assets/Images/response.png');
+    this.load.image('firstDesk', 'Assets/Images/Acceuil.png');
+    this.load.image('exitExtinguisher', 'Assets/Images/exit.png');
+    this.load.image('deskGame', 'Assets/Images/deskGame.png');
+    this.load.image('vitrineWAD', 'Assets/Images/vitrineWAD.png');
+    this.load.image('vitrineWEB', 'Assets/Images/vitrineWeb.png');
+    this.load.image('vitrine', 'Assets/Images/vitrine.png');
+
+    // this.load.image('', 'Assets/Images/.png');
+
 }
 
 function create ()
 {
-    // ------------------CAMERA-----------------------------------//
     //-------------------BACKGROUND -----------------------------------------//
     background = this.add.image(0,0, 'background');
     background.setOrigin(0,0);
@@ -69,7 +77,7 @@ function create ()
     this.physics.add.collider(character, museumLayer, collisionPlayerLayer, null, this);
     
     
-    computer = this.add.image(200,400,'Computer').setInteractive();
+    computer = this.add.image(495,100,'Computer').setInteractive();
     computer.on('pointerdown', PopUp);
     
     
@@ -79,8 +87,8 @@ function create ()
     
     this.anims.create({
         key: "up",
-        frameRate: 4,
-        frames: this.anims.generateFrameNumbers("character", {start: 4, end:7}),
+        frameRate: 6,
+        frames: this.anims.generateFrameNumbers("character", {start: 9, end:11}),
         repeat: -1
     });
     
@@ -90,8 +98,8 @@ function create ()
     
     this.anims.create({
         key: "down",
-        frameRate: 4,
-        frames: this.anims.generateFrameNumbers("character", {start: 0, end:3}),
+        frameRate: 6,
+        frames: this.anims.generateFrameNumbers("character", {start: 0, end:2}),
         repeat: -1
     });
     
@@ -101,8 +109,8 @@ function create ()
     
     this.anims.create({
         key: "right",
-        frameRate: 4,
-        frames: this.anims.generateFrameNumbers("character", {start: 12, end:14}),
+        frameRate: 6,
+        frames: this.anims.generateFrameNumbers("character", {start: 6, end:8}),
         repeat: -1
     });
     
@@ -112,8 +120,8 @@ function create ()
     
     this.anims.create({
         key: "left",
-        frameRate: 4,
-        frames: this.anims.generateFrameNumbers("character", {start: 8, end:10}),
+        frameRate: 6,
+        frames: this.anims.generateFrameNumbers("character", {start: 3, end:5}),
         repeat: -1
     });
     
@@ -121,12 +129,36 @@ function create ()
     
     this.anims.create({
         key: "idle",
-        frameRate: 2,
+        frameRate: 6,
         frames: this.anims.generateFrameNumbers("character", {start: 0, end:0}),
         repeat: -1
     });
     
     character.anims.play("idle");
+
+    // ------------------DECOR-----------------------------------//
+    let exitExtinguisher = this.add.image(2,165,'exitExtinguisher');
+    exitExtinguisher.setOrigin(0,0);
+
+    let firstDesk = this.add.image(52, 0, 'firstDesk');
+    firstDesk.setOrigin(0,0);
+
+    let deskGame = this.add.image(52, 440, 'deskGame');
+    deskGame.setOrigin(0,0);
+
+    let vitrineWAD = this.add.image(955, 420, 'vitrineWAD');
+    vitrineWAD.setOrigin(0,0);
+
+    let vitrineWEB = this.add.image(1100, 420, 'vitrineWEB');
+    vitrineWEB.setOrigin(0,0);
+
+    let vitrine = this.add.image(955, 220, 'vitrine');
+    vitrineWEB.setOrigin(0,0);
+
+
+
+
+    
     
     //------------- Pop Up question / response ----------------------//
     
