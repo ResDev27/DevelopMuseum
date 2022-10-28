@@ -29,9 +29,6 @@
     include "./includes/footer.php";
     ?>
 
-
-
-</body>
 <?php
 
 // 1. Créer une connexion à la BD
@@ -54,7 +51,7 @@ try {
         echo '<th>AGE</th>';
         echo '<th>SCORE</th>';
         echo '</tr>';
-        echo '<td>' . $badge['pseudo'] . '</td>';
+        echo '<td class="user-box">' . $badge['pseudo'] . '</td>';
         echo '<td>' . $badge['age'] . '</td>';
         echo '<td>' . $badge['score'] . '</td>';
         echo '</table>';
@@ -70,3 +67,6 @@ try {
 
 
 ?>
+
+
+</body>
