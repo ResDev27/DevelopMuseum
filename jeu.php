@@ -8,22 +8,30 @@
     <link rel="stylesheet" href="./assets/css/background.css">
     <title>DevelopMuseum Jeu</title>
 </head>
+
 <body>
 
-
-<?php
+    <div style="z-index:1000">
+        <form action="./pointsTraitement.php" method="post">
+            <input type="hidden" , name="score" , value="3675">
+            <button>Finir Session</button>
+        </form>
+    </div>
+    <?php
     include "./includes/header.php";
     ?>
 
     <main>
-     <iframe src="iframe.php"></iframe>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/p5.min.js'></script>
-   <script src="./Js/background.js"></script></main>
+        <iframe src="iframe.php"></iframe>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/p5.min.js'></script>
+        <script src="./Js/background.js"></script>
+    </main>
 
-<?php
+    <?php
     include "./includes/footer.php";
-?> 
+    ?>
+
 
 </body>
-</html>
 
+</html>

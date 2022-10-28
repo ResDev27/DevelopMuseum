@@ -11,14 +11,6 @@
 </head>
 
     <body>
-
-   
-       
-    
-    
-</body>
-
-        
             <?php
             if (isset($_GET['p'])) {
                 include "./" . $_GET['p'] . ".php";
@@ -26,7 +18,5 @@
                 include "./inscription.php";
             }
             ?>
-      
-
     </body>
 </html>
