@@ -17,7 +17,7 @@ try {
     $stmt->bindValue(":score", $score, PDO::PARAM_INT);
     $stmt->bindValue(":pseudo", $_SESSION['pseudo']);
     $stmt->execute();
-    header('Location: ./points.php');
+    header('Location: points.php');
     session_destroy();
 
 } catch (Exception $e) {

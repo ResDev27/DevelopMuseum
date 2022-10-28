@@ -17,6 +17,7 @@
         <script src="./pointsFunction.js"></script>
         <button>Enregistre ton Score</button>
         </form>
+    </div>
 
 
 
