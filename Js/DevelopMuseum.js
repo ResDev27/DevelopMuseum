@@ -56,6 +56,8 @@ function preload ()
     this.load.image('deskGame', 'Assets/Images/deskGame.png');
     this.load.image('vitrineWAD', 'Assets/Images/vitrineWAD.png');
     this.load.image('vitrineWEB', 'Assets/Images/vitrineWeb.png');
+    this.load.image('vitrine', 'Assets/Images/vitrine.png');
+
     // this.load.image('', 'Assets/Images/.png');
 
 }
@@ -144,8 +146,19 @@ function create ()
     let deskGame = this.add.image(52, 440, 'deskGame');
     deskGame.setOrigin(0,0);
 
-    let vitrineWAD = this.add.image(900, 440, 'vitrineWAD');
+    let vitrineWAD = this.add.image(955, 420, 'vitrineWAD');
     vitrineWAD.setOrigin(0,0);
+
+    let vitrineWEB = this.add.image(1100, 420, 'vitrineWEB');
+    vitrineWEB.setOrigin(0,0);
+
+    let vitrine = this.add.image(955, 220, 'vitrine');
+    vitrineWEB.setOrigin(0,0);
+
+
+
+
+    
     
     //------------- Pop Up question / response ----------------------//
     
