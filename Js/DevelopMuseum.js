@@ -26,7 +26,13 @@ let config = {
 let game = new Phaser.Game(config);
 let Keystate = true;
 let background;
-let computer; 
+let computer;
+let map; 
+let popUp;
+let response1;
+let response2;
+let response3;
+let score;
 
 
 var cursors;
@@ -35,25 +41,34 @@ var dist;
 
 function preload ()
 {
-    this.load.image('background', 'Assets/Images/museum640.png');
+    //this.load.image('background', 'Assets/Images/museum640.png');
     this.load.spritesheet('character', 'Assets/Images/character.png', {
         frameWidth: 65,
         frameHeight: 98,
     });
     this.load.image('Computer', 'Assets/Images/Computer.png');
+    this.load.image('museumTiles', 'Assets/Images/museum640.png');
+    this.load.tilemapTiledJSON('museumMap', 'Assets/maps/museummapproject.tmj');
+    this.load.image('window', 'Assets/Images/window.png')
+    this.load.image('response', 'Assets/Images/response.png')
 }
 
 function create ()
 {
     //-------------------BACKGROUND -----------------------------------------//
-    background = this.add.image(0,0, 'background');
-    background.setOrigin(0,0);
+    // background = this.add.image(0,0, 'background');
+    // background.setOrigin(0,0);
+    
+    map = this.make.tilemap({ key: 'museumMap'});
+    let museumm = map.addTilesetImage('museum', 'museumTiles');
+    let museumLayer = map.createStaticLayer(0, museumm, 0,0);
+    
     
     computer = this.add.image(200,400,'Computer').setInteractive();
-    computer.on('pointerdown', start);
-
-
-
+    computer.on('pointerdown', PopUp);
+    
+    
+    
     // ---- Creation of all animation for the character and add of physics for the velocity ----//
     //---- ANIMATION ------ UP -----------------------------------------------//
     
@@ -67,7 +82,7 @@ function create ()
     character = this.physics.add.sprite(100, 450, 'character');
     
     character.anims.play("up");
-
+    
     //----CREATION ANIMATION ------ DOWN ---------------------------------------//
     
     this.anims.create({
@@ -80,7 +95,7 @@ function create ()
     character.anims.play("down");
     
     //-----CREATION ANIMATION ----- RIGHT ----------------------------------------//
-
+    
     this.anims.create({
         key: "right",
         frameRate: 4,
@@ -110,9 +125,31 @@ function create ()
     
     character.anims.play("idle");
     
-    //------------- Variable to monitor which key is press ----------------------//
+    //------------- Pop Up question / response ----------------------//
     
     cursors = this.input.keyboard.createCursorKeys();
+    popUp = this.add.image(400,300,'window').setVisible(false).setInteractive();
+    popUp.on('pointerdown', Close);
+    popUpText = this.add.text(200, 120, 'Quel est l"OS parmi ces trois propositions', { fontFamily: 'Georgia, "Goudy Bookletter 1911", Times, serif' }).setVisible(false);
+
+
+    response1= this.add.image(400,250 + 10, 'response').setVisible(false).setInteractive();
+    response1.setScale(0.7);
+    response1Text = this.add.text(300, 250 + 5, 'Windows 10', { fontFamily: 'Georgia, "Goudy Bookletter 1911", Times, serif' }).setVisible(false);
+
+    response2= this.add.image(400,250 + 90, 'response').setVisible(false).setInteractive();
+    response2.setScale(0.7);
+    response2Text = this.add.text(300, 250 + 90, 'DHCP', { fontFamily: 'LLPIXEL3' }).setVisible(false);
+
+    response3= this.add.image(400,250 + 170, 'response').setVisible(false).setInteractive()
+    response3.setScale(0.7);
+    response3Text = this.add.text(300, 250 + 160, 'DNS', { fontFamily: 'Georgia, "Goudy Bookletter 1911", Times, serif' }).setVisible(false);
+
+
+    response1.on('pointerdown', Close);
+    response2.on('pointerdown', Close);
+    response3.on('pointerdown', Close);
+
     
 }
 
@@ -120,7 +157,7 @@ function update()
 {
     // -----------------------Update movement --------------------//
     // Character control with the arrow ( left, right, up, down) 
-
+    
     
     if (cursors.left.isDown) //---------LEFT MOVE------------//
     {
@@ -156,20 +193,64 @@ function update()
     {
         character.setVelocityX(0);
         character.setVelocityY(0);
-
+        
         character.anims.play('idle');
     }
-
-    //dist = Phaser.Math.Distance.BetweenPoints(character, computer);
-
-    // if(dist < 75)
-    // {
-    //     console.log("T'es tout pres");
-    // }
-
+    
 }
 
-function start()
+function PopUp()
 {
-    console.log("Yep, t'as bien cliqué");
+    popUp.setVisible(true);
+    popUpText.setVisible(true);
+
+    response1.setVisible(true);
+    response1Text.setVisible(true);
+
+    response2.setVisible(true);
+    response2Text.setVisible(true);
+
+    response3.setVisible(true);
+    response3Text.setVisible(true);
+
+
 }
+
+function Close()
+{
+    popUp.setVisible(false);
+
+    popUpText.setVisible(false);
+
+    response1.setVisible(false);
+    response1Text.setVisible(false);
+
+    response2.setVisible(false);
+    response2Text.setVisible(false);
+
+    response3.setVisible(false);
+    response3Text.setVisible(false);
+
+    score ++;
+    console.log(score);
+}
+
+// function checkAnswer(answerNumber) {
+//     for (let i = 0; i < 3; i++) {
+//         if (i == questions[questionCounter].goodAnswer) answerText[i].setColor("#00AA00");
+//         else answerText[i].setColor("#AA0000");
+//     }
+//     for (let i = 0; i < 3; i++) {
+//         answerPanelImage[i].disableInteractive();
+//     }
+//     if (answerNumber == questions[questionCounter].goodAnswer) {
+//         starImage[questionCounter].alpha = 1;
+//         score++;
+//     }
+//     else {
+//         starImage[questionCounter].tint = 0xff0000;
+//         starImage[questionCounter].alpha = 0.6;
+//         answerPanelImage[answerNumber].tweenWrong.play();
+//     }
+//     nextButton.setVisible(true);
+// }
