@@ -12,10 +12,12 @@
 <body>
 
     <div style="z-index:1000">
-        <form action="./pointsTraitement.php" method="post">
-            <input type="hidden" , name="score" , value="3675">
-            <button>Finir Session</button>
+        <form action="./pointsTraitement.php" method="POST">
+        <input type="hidden" id="field"  name="score" value="">
+        <script src="./pointsFunction.js"></script>
+        <button>Enregistre ton Score</button>
         </form>
+
     </div>
     <?php
     include "./includes/header.php";
