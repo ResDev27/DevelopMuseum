@@ -49,8 +49,15 @@ function preload ()
     this.load.image('Computer', 'Assets/Images/Computer.png');
     this.load.image('museumTiles', 'Assets/Images/museum640.png');
     this.load.tilemapTiledJSON('museumMap', 'Assets/maps/museummapproject.tmj');
-    this.load.image('window', 'Assets/Images/window.png')
-    this.load.image('response', 'Assets/Images/response.png')
+    this.load.image('window', 'Assets/Images/window.png');
+    this.load.image('response', 'Assets/Images/response.png');
+    this.load.image('firstDesk', 'Assets/Images/Acceuil.png');
+    this.load.image('exitExtinguisher', 'Assets/Images/exit.png');
+    this.load.image('deskGame', 'Assets/Images/deskGame.png');
+    this.load.image('vitrineWAD', 'Assets/Images/vitrineWAD.png');
+    this.load.image('vitrineWEB', 'Assets/Images/vitrineWeb.png');
+    // this.load.image('', 'Assets/Images/.png');
+
 }
 
 function create ()
@@ -68,7 +75,7 @@ function create ()
     this.physics.add.collider(character, museumLayer, collisionPlayerLayer, null, this);
     
     
-    computer = this.add.image(200,400,'Computer').setInteractive();
+    computer = this.add.image(495,100,'Computer').setInteractive();
     computer.on('pointerdown', PopUp);
     
     
@@ -126,6 +133,19 @@ function create ()
     });
     
     character.anims.play("idle");
+
+    // ------------------DECOR-----------------------------------//
+    let exitExtinguisher = this.add.image(2,165,'exitExtinguisher');
+    exitExtinguisher.setOrigin(0,0);
+
+    let firstDesk = this.add.image(52, 0, 'firstDesk');
+    firstDesk.setOrigin(0,0);
+
+    let deskGame = this.add.image(52, 440, 'deskGame');
+    deskGame.setOrigin(0,0);
+
+    let vitrineWAD = this.add.image(900, 440, 'vitrineWAD');
+    vitrineWAD.setOrigin(0,0);
     
     //------------- Pop Up question / response ----------------------//
     
@@ -154,9 +174,6 @@ function create ()
 
 
     this.cameras.main.startFollow(character, true);
-
-    // ------------------DECOR-----------------------------------//
-
     
 }
 
