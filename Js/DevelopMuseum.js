@@ -42,9 +42,9 @@ var dist;
 function preload ()
 {
     this.load.image('background', 'Assets/Images/museum640.png');
-    this.load.spritesheet('character', 'Assets/Images/character.png', {
-        frameWidth: 65,
-        frameHeight: 98,
+    this.load.spritesheet('character', 'Assets/Images/chara.png', {
+        frameWidth: 49,
+        frameHeight: 49,
     });
     this.load.image('Computer', 'Assets/Images/Computer.png');
     this.load.image('museumTiles', 'Assets/Images/museum640.png');
@@ -79,8 +79,8 @@ function create ()
     
     this.anims.create({
         key: "up",
-        frameRate: 4,
-        frames: this.anims.generateFrameNumbers("character", {start: 4, end:7}),
+        frameRate: 6,
+        frames: this.anims.generateFrameNumbers("character", {start: 9, end:11}),
         repeat: -1
     });
     
@@ -90,8 +90,8 @@ function create ()
     
     this.anims.create({
         key: "down",
-        frameRate: 4,
-        frames: this.anims.generateFrameNumbers("character", {start: 0, end:3}),
+        frameRate: 6,
+        frames: this.anims.generateFrameNumbers("character", {start: 0, end:2}),
         repeat: -1
     });
     
@@ -101,8 +101,8 @@ function create ()
     
     this.anims.create({
         key: "right",
-        frameRate: 4,
-        frames: this.anims.generateFrameNumbers("character", {start: 12, end:14}),
+        frameRate: 6,
+        frames: this.anims.generateFrameNumbers("character", {start: 6, end:8}),
         repeat: -1
     });
     
@@ -112,8 +112,8 @@ function create ()
     
     this.anims.create({
         key: "left",
-        frameRate: 4,
-        frames: this.anims.generateFrameNumbers("character", {start: 8, end:10}),
+        frameRate: 6,
+        frames: this.anims.generateFrameNumbers("character", {start: 3, end:5}),
         repeat: -1
     });
     
@@ -121,7 +121,7 @@ function create ()
     
     this.anims.create({
         key: "idle",
-        frameRate: 2,
+        frameRate: 6,
         frames: this.anims.generateFrameNumbers("character", {start: 0, end:0}),
         repeat: -1
     });
