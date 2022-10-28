@@ -33,7 +33,7 @@ justify-content: center;
   z-index: 800;
   width: 820px;
   height: 660px; 
-  left: 26%;
+  left: 33%;
   top: 20%;
   border: none;
   }
@@ -258,7 +258,7 @@ div.cadre{
   background-image: url("../Images/illufrontend/frame1.png");
   position: relative;
   background-repeat: no-repeat;
-  margin-left: 22.7%;
+  margin-left: 29.7%;
   bottom: -5px;
   background-size: 950px 775px;}
 
