@@ -11,15 +11,15 @@
     <table class="login-box">
         <tr>
             
-        <th class="user-box" >Pseudo</th>
+        <th class="user-box" id="pseudo" >Pseudo</th>
            
 
      
-        <th class="user-box">Age</th>
+        <th class="user-box" id="age">Age</th>
         
 
         
-        <th class="user-box">Score</th>
+        <th class="user-box" id='score'>Score</th>
         
         </tr>
        
