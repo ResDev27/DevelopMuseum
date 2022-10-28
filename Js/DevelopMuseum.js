@@ -55,7 +55,6 @@ function preload ()
 
 function create ()
 {
-    // ------------------CAMERA-----------------------------------//
     //-------------------BACKGROUND -----------------------------------------//
     background = this.add.image(0,0, 'background');
     background.setOrigin(0,0);
@@ -155,6 +154,9 @@ function create ()
 
 
     this.cameras.main.startFollow(character, true);
+
+    // ------------------DECOR-----------------------------------//
+
     
 }
 
