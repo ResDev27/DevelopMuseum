@@ -212,7 +212,7 @@ color: #FFA101;
 .logo_header{
 
   position: relative;
-  width: 14%;
+  width: 11%;
 height: 115%;
   padding: 20px;
   margin-top: 30px;
@@ -251,16 +251,15 @@ z-index: 850 ;
 
 }
 
-/* div.cadre{
+div.cadre{
   z-index: 805;
-  width:1200px;
-  height: 1026px;
-  background-image: url("../Images/bordure.png");
+  width: 54.6%;
+  height: 745px;
+  background-image: url("../Images/illufrontend/bordure.png");
   position: relative;
   background-repeat: no-repeat;
-  margin-left: 13.8%;
-  bottom: 190px;
-  background-size: contain;
-
+  margin-left: 22.8%;
+  bottom: 19px;
+  background-size: 930px 730px;
   
-} */
+}
