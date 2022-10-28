@@ -57,6 +57,7 @@ function preload ()
     this.load.image('vitrineWAD', 'Assets/Images/vitrineWAD.png');
     this.load.image('vitrineWEB', 'Assets/Images/vitrineWeb.png');
     this.load.image('vitrine', 'Assets/Images/vitrine.png');
+    this.load.image('vitrineASR', 'Assets/Images/vitrineAsR.png');
 
     // this.load.image('', 'Assets/Images/.png');
 
@@ -152,8 +153,11 @@ function create ()
     let vitrineWEB = this.add.image(1100, 420, 'vitrineWEB');
     vitrineWEB.setOrigin(0,0);
 
-    let vitrine = this.add.image(955, 220, 'vitrine');
-    vitrineWEB.setOrigin(0,0);
+    let vitrine = this.add.image(1020, 120, 'vitrine');
+    vitrine.setOrigin(0,0);
+
+    let vitrineASR = this.add.image(1150, 115, 'vitrineASR');
+    vitrineASR.setOrigin(0,0);
 
 
 
