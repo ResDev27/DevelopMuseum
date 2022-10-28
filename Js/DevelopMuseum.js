@@ -48,6 +48,7 @@ function preload ()
 
 function create ()
 {
+    // ------------------CAMERA-----------------------------------//
     //-------------------BACKGROUND -----------------------------------------//
     background = this.add.image(0,0, 'background');
     background.setOrigin(0,0);
@@ -123,6 +124,8 @@ function create ()
     //------------- Variable to monitor which key is press ----------------------//
     
     cursors = this.input.keyboard.createCursorKeys();
+
+    this.cameras.main.startFollow(character, true);
     
 }
 
@@ -131,8 +134,11 @@ function update()
     // -----------------------Update movement --------------------//
     // Character control with the arrow ( left, right, up, down) 
 
+    // if (this.cameras.main.scrollX<1600) this.cameras.main.scrollX += 1;
+
+    //---------LEFT MOVE------------//
     
-    if (cursors.left.isDown) //---------LEFT MOVE------------//
+    if (cursors.left.isDown) 
     {
         character.setVelocityX(-160);
         character.setVelocityY(0);
@@ -169,6 +175,8 @@ function update()
 
         character.anims.play('idle');
     }
+
+
 
     //dist = Phaser.Math.Distance.BetweenPoints(character, computer);
 
