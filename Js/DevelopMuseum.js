@@ -145,7 +145,7 @@ function create ()
     deskGame.setOrigin(0,0);
 
     let vitrineWAD = this.add.image(900, 440, 'vitrineWAD');
-    dvitr.setOrigin(0,0);
+    vitrineWAD.setOrigin(0,0);
     
     //------------- Pop Up question / response ----------------------//
     
