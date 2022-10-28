@@ -44,11 +44,11 @@ function preload ()
     this.load.image('Computer', 'Assets/Images/Computer.png');
     this.load.image('museumTiles', 'Assets/Images/museum640.png');
     this.load.tilemapTiledJSON('museumMap', 'Assets/maps/museummapproject.tmj');
+    
 }
 
 function create ()
 {
-    // ------------------CAMERA-----------------------------------//
     //-------------------BACKGROUND -----------------------------------------//
     background = this.add.image(0,0, 'background');
     background.setOrigin(0,0);
@@ -126,6 +126,9 @@ function create ()
     cursors = this.input.keyboard.createCursorKeys();
 
     this.cameras.main.startFollow(character, true);
+
+    // ------------------DECOR-----------------------------------//
+
     
 }
 
