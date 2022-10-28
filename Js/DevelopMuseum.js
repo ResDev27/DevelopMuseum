@@ -41,24 +41,24 @@ var dist;
 
 function preload ()
 {
-    this.load.image('background', 'Assets/Images/museum640.png');
-    this.load.spritesheet('character', 'Assets/Images/chara.png', {
+    this.load.image('background', 'assets/images/museum640.png');
+    this.load.spritesheet('character', 'assets/images/chara.png', {
         frameWidth: 49,
         frameHeight: 49,
     });
-    this.load.image('Computer', 'Assets/Images/Computer.png');
-    this.load.image('museumTiles', 'Assets/Images/museum640.png');
-    this.load.tilemapTiledJSON('museumMap', 'Assets/maps/museummapproject.tmj');
-    this.load.image('window', 'Assets/Images/window.png');
-    this.load.image('response', 'Assets/Images/response.png');
-    this.load.image('firstDesk', 'Assets/Images/Acceuil.png');
-    this.load.image('exitExtinguisher', 'Assets/Images/exit.png');
-    this.load.image('deskGame', 'Assets/Images/deskGame.png');
-    this.load.image('vitrineWAD', 'Assets/Images/vitrineWAD.png');
-    this.load.image('vitrineWEB', 'Assets/Images/vitrineWeb.png');
-    this.load.image('vitrine', 'Assets/Images/vitrine.png');
+    this.load.image('Computer', 'assets/images/Computer.png');
+    this.load.image('museumTiles', 'assets/images/museum640.png');
+    this.load.tilemapTiledJSON('museumMap', 'assets/maps/museummapproject.tmj');
+    this.load.image('window', 'assets/images/window.png');
+    this.load.image('response', 'assets/images/response.png');
+    this.load.image('firstDesk', 'assets/images/Acceuil.png');
+    this.load.image('exitExtinguisher', 'assets/images/exit.png');
+    this.load.image('deskGame', 'assets/images/deskGame.png');
+    this.load.image('vitrineWAD', 'assets/images/vitrineWAD.png');
+    this.load.image('vitrineWEB', 'assets/images/vitrineWeb.png');
+    this.load.image('vitrine', 'assets/images/vitrine.png');
 
-    // this.load.image('', 'Assets/Images/.png');
+    // this.load.image('', 'assets/images/.png');
 
 }
 
