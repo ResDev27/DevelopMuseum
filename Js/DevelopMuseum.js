@@ -2,10 +2,10 @@ let config = {
 
     type: Phaser.AUTO,
     width: 800,
-    height: 600,
+    height: 640,
     scale: {
         width: 800,
-        height: 600,
+        height: 640,
         parent: "game"
     },
     physics: {
@@ -26,7 +26,8 @@ let config = {
 let game = new Phaser.Game(config);
 let Keystate = true;
 let background;
-let computer; 
+let computer;
+let map; 
 
 
 var cursors;
@@ -35,12 +36,14 @@ var dist;
 
 function preload ()
 {
-    this.load.image('background', 'Assets/Images/museum.png');
+    this.load.image('background', 'Assets/Images/museum640.png');
     this.load.spritesheet('character', 'Assets/Images/character.png', {
         frameWidth: 65,
         frameHeight: 98,
     });
     this.load.image('Computer', 'Assets/Images/Computer.png');
+    this.load.image('museumTiles', 'Assets/Images/museum640.png');
+    this.load.tilemapTiledJSON('museumMap', 'Assets/maps/museummapproject.tmj');
 }
 
 function create ()
@@ -48,6 +51,15 @@ function create ()
     //-------------------BACKGROUND -----------------------------------------//
     background = this.add.image(0,0, 'background');
     background.setOrigin(0,0);
+
+    map = this.make.tilemap({ key: 'museumMap'});
+    let museumm = map.addTilesetImage('museum', 'museumTiles');
+    let museumLayer = map.createStaticLayer(0, museumm, 0,0);
+    museumLayer.setCollisionBetween(0, 1000);
+    character = this.physics.add.sprite(100, 450, 'character');
+
+    this.physics.add.collider(character, museumLayer, collisionPlayerLayer, null, this);
+    
     
     computer = this.add.image(200,400,'Computer').setInteractive();
     computer.on('pointerdown', start);
@@ -63,8 +75,6 @@ function create ()
         frames: this.anims.generateFrameNumbers("character", {start: 4, end:7}),
         repeat: -1
     });
-    
-    character = this.physics.add.sprite(100, 450, 'character');
     
     character.anims.play("up");
 
@@ -172,4 +182,8 @@ function update()
 function start()
 {
     console.log("Yep, t'as bien cliqué");
+}
+
+function collisionPlayerLayer(characterCollide, museumLayerCollide){
+    console.log("collision");
 }
