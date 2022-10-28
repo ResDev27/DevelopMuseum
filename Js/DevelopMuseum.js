@@ -55,13 +55,18 @@ function preload ()
 
 function create ()
 {
+    // ------------------CAMERA-----------------------------------//
     //-------------------BACKGROUND -----------------------------------------//
-    // background = this.add.image(0,0, 'background');
-    // background.setOrigin(0,0);
-    
+    background = this.add.image(0,0, 'background');
+    background.setOrigin(0,0);
+
     map = this.make.tilemap({ key: 'museumMap'});
     let museumm = map.addTilesetImage('museum', 'museumTiles');
     let museumLayer = map.createStaticLayer(0, museumm, 0,0);
+    museumLayer.setCollisionBetween(0, 1000);
+    character = this.physics.add.sprite(300, 350, 'character');
+
+    this.physics.add.collider(character, museumLayer, collisionPlayerLayer, null, this);
     
     
     computer = this.add.image(200,400,'Computer').setInteractive();
@@ -78,8 +83,6 @@ function create ()
         frames: this.anims.generateFrameNumbers("character", {start: 4, end:7}),
         repeat: -1
     });
-    
-    character = this.physics.add.sprite(100, 450, 'character');
     
     character.anims.play("up");
     
@@ -150,6 +153,8 @@ function create ()
     response2.on('pointerdown', Close);
     response3.on('pointerdown', Close);
 
+
+    this.cameras.main.startFollow(character, true);
     
 }
 
@@ -158,8 +163,12 @@ function update()
     // -----------------------Update movement --------------------//
     // Character control with the arrow ( left, right, up, down) 
     
+
+    // if (this.cameras.main.scrollX<1600) this.cameras.main.scrollX += 1;
+
+    //---------LEFT MOVE------------//
     
-    if (cursors.left.isDown) //---------LEFT MOVE------------//
+    if (cursors.left.isDown) 
     {
         character.setVelocityX(-160);
         character.setVelocityY(0);
@@ -196,7 +205,16 @@ function update()
         
         character.anims.play('idle');
     }
-    
+
+
+
+    //dist = Phaser.Math.Distance.BetweenPoints(character, computer);
+
+    // if(dist < 75)
+    // {
+    //     console.log("T'es tout pres");
+    // }
+
 }
 
 function PopUp()
@@ -254,3 +272,6 @@ function Close()
 //     }
 //     nextButton.setVisible(true);
 // }
+function collisionPlayerLayer(characterCollide, museumLayerCollide){
+    console.log("collision");
+}
