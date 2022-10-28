@@ -9,6 +9,7 @@ $pseudo = $_POST['pseudo'];
 $age = $_POST['age'];
 $date = $_POST['date'];
 $_SESSION['pseudo'] = $pseudo;
+$_SESSION['age'] = $age;
 
 //
 try {

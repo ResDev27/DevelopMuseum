@@ -7,6 +7,7 @@ session_start();
 
 // 1. Récuperer les informations pour le stocker dans la base de donnée
 $score = $_POST['score'];
+$_SESSION['score'] = $score;
 
 
 //
