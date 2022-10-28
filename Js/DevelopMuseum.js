@@ -78,7 +78,7 @@ function create ()
     
     this.anims.create({
         key: "up",
-        frameRate: 6,
+        frameRate: 8,
         frames: this.anims.generateFrameNumbers("character", {start: 9, end:11}),
         repeat: -1
     });
@@ -89,7 +89,7 @@ function create ()
     
     this.anims.create({
         key: "down",
-        frameRate: 6,
+        frameRate: 8,
         frames: this.anims.generateFrameNumbers("character", {start: 0, end:2}),
         repeat: -1
     });
@@ -100,7 +100,7 @@ function create ()
     
     this.anims.create({
         key: "right",
-        frameRate: 6,
+        frameRate: 8,
         frames: this.anims.generateFrameNumbers("character", {start: 6, end:8}),
         repeat: -1
     });
@@ -111,7 +111,7 @@ function create ()
     
     this.anims.create({
         key: "left",
-        frameRate: 6,
+        frameRate: 8,
         frames: this.anims.generateFrameNumbers("character", {start: 3, end:5}),
         repeat: -1
     });
@@ -120,7 +120,7 @@ function create ()
     
     this.anims.create({
         key: "idle",
-        frameRate: 6,
+        frameRate: 1,
         frames: this.anims.generateFrameNumbers("character", {start: 0, end:0}),
         repeat: -1
     });
