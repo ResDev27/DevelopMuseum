@@ -41,7 +41,7 @@ var dist;
 
 function preload ()
 {
-    //this.load.image('background', 'Assets/Images/museum640.png');
+    this.load.image('background', 'Assets/Images/museum640.png');
     this.load.spritesheet('character', 'Assets/Images/character.png', {
         frameWidth: 65,
         frameHeight: 98,
