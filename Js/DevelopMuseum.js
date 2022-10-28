@@ -2,10 +2,10 @@ let config = {
 
     type: Phaser.AUTO,
     width: 800,
-    height: 600,
+    height: 640,
     scale: {
         width: 800,
-        height: 600,
+        height: 640,
         parent: "game"
     },
     physics: {
@@ -35,7 +35,7 @@ var dist;
 
 function preload ()
 {
-    this.load.image('background', 'Assets/Images/museum.png');
+    this.load.image('background', 'Assets/Images/museum640.png');
     this.load.spritesheet('character', 'Assets/Images/character.png', {
         frameWidth: 65,
         frameHeight: 98,
