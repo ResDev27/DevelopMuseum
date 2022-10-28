@@ -1,14 +1,36 @@
 <body>
     
 <main><script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/p5.min.js'></script>
+<link rel="stylesheet" href="./Assets/css/score.css">
    <script src="./Js/point.js"></script></main>
    <?php
     include "./includes/header.php";
     ?>
     
+    
+    <table class="login-box">
+        <tr>
+            
+        <th class="user-box" >Pseudo</th>
+           
+
+     
+        <th class="user-box">Age</th>
+        
+
+        
+        <th class="user-box">Score</th>
+        
+        </tr>
+       
+    </table>
+    
     <?php
     include "./includes/footer.php";
     ?>
+
+
+
 </body>
 <?php
 

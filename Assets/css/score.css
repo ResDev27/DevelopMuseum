@@ -1,0 +1,68 @@
+:root{
+    --bleu: #3a4e7a;
+   --bleufonce:#091d36;
+   --grisblanc: #f1f1f0;
+   --bleuclair: #5e83ba;
+   --gris:#c2d2e9;
+   --jaune:rgb(255, 191, 33);
+   --overlay-color: rgba(24,39,51,0.85);
+       --menu-speed: 0.75s;
+   }
+  
+  
+  @font-face {
+      font-family: "pixel";
+      src: url('../fonts/LLPIXEL3.ttf');
+    }
+    @font-face {
+      font-family: "04b";
+      src: url("../fonts/04B_30__.TTF");
+    }
+    @font-face {
+      font-family: "rainyhearts";
+      src: url("../fonts/rainyhearts.ttf");
+    }
+    @font-face {
+      font-family: "Mario-Kart-DS";
+      src: url("../fonts/Mario-Kart-DS.ttf");
+    }
+  
+    .login-box {
+      font-family: "Mario-Kart-DS";
+      position: absolute;
+      color: #ffbf21;
+      z-index: 850;
+      width: 400px;
+      background: rgba(0,0,0,.5);
+      box-sizing: border-box;
+      box-shadow: 0 15px 25px rgba(0,0,0,.6);
+      border-radius: 10px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      top: 43%;
+      left: 41%;
+    }
+    
+  
+    .login-box .user-box {
+      font-family: "rainyhearts";
+      /* width: 100%; */
+      position: relative;
+      font-weight: bold;
+      font-size: 1.8rem;
+      display: flex;
+      justify-content: space-around;
+    
+    }
+    
+  
+ 
+
+
+
+
+    
+
+
+    

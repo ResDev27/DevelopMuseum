@@ -258,8 +258,17 @@ div.cadre{
   background-image: url("../Images/illufrontend/bordure.png");
   position: relative;
   background-repeat: no-repeat;
-  margin-left: 22.8%;
-  bottom: 19px;
+  margin-left: 23.8%;
+  bottom: -5px;
   background-size: 930px 730px;
   
+}
+
+/* ------------------------------------Score tableau--------------------------- */
+
+#tableau_score{
+
+  z-index: 900;
+  position: absolute;
+
 }
